@@ -11,7 +11,7 @@ name: OpenWrt-CI
 
 on:
   push:
-    branches: 
+    branches:
       - master
   # schedule:
   #   - cron: 0 20 * * *
@@ -4408,7 +4408,7 @@ jobs:
           # CONFIG_PACKAGE_libeudev is not set
           CONFIG_PACKAGE_libev=y
           # CONFIG_PACKAGE_libevdev is not set
-          # CONFIG_PACKAGE_libevent2 is not set
+          CONFIG_PACKAGE_libevent2=y
           # CONFIG_PACKAGE_libevent2-core is not set
           # CONFIG_PACKAGE_libevent2-extra is not set
           # CONFIG_PACKAGE_libevent2-openssl is not set
@@ -4907,25 +4907,25 @@ jobs:
           # CONFIG_PACKAGE_luci-app-sqm is not set
           # CONFIG_PACKAGE_luci-app-squid is not set
           CONFIG_PACKAGE_luci-app-ssr-plus=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Client=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Client is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client is not set
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Server=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Server is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server is not set
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NONE_V2RAY is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray is not set
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_SagerNet_Core is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria is not set
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2 is not set
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_V2ray_Plugin is not set
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_V2ray_Plugin=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server is not set
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
           # CONFIG_PACKAGE_luci-app-statistics is not set
@@ -4949,7 +4949,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-upnp=y
           # CONFIG_PACKAGE_luci-app-usb-printer is not set
           # CONFIG_PACKAGE_luci-app-uugamebooster is not set
-          # CONFIG_PACKAGE_luci-app-v2ray-server is not set
+          CONFIG_PACKAGE_luci-app-v2ray-server=y
           # CONFIG_PACKAGE_luci-app-verysync is not set
           # CONFIG_PACKAGE_luci-app-vlmcsd is not set
           # CONFIG_PACKAGE_luci-app-vnstat is not set
@@ -4969,11 +4969,11 @@ jobs:
           #
           # 4. Themes
           #
-          # CONFIG_PACKAGE_luci-theme-argon=y
-          # CONFIG_PACKAGE_luci-theme-argon-mod=y
+          CONFIG_PACKAGE_luci-theme-argon=y
+          # CONFIG_PACKAGE_luci-theme-argon-mod is not set
           CONFIG_PACKAGE_luci-theme-bootstrap=y
-          # CONFIG_PACKAGE_luci-theme-material=y
-          # CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_luci-theme-material=y
+          CONFIG_PACKAGE_luci-theme-netgear=y
           # end of 4. Themes
 
           #
@@ -5112,6 +5112,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-upnp-vi is not set
           CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
           # CONFIG_PACKAGE_luci-i18n-upnp-zh-tw is not set
+          CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
           # CONFIG_PACKAGE_luci-i18n-wol-ca is not set
           # CONFIG_PACKAGE_luci-i18n-wol-cs is not set
           # CONFIG_PACKAGE_luci-i18n-wol-de is not set
@@ -5905,8 +5906,8 @@ jobs:
           # CONFIG_PACKAGE_gateway-go is not set
           # CONFIG_PACKAGE_haproxy is not set
           # CONFIG_PACKAGE_haproxy-nossl is not set
-          # CONFIG_PACKAGE_kcptun-client is not set
-          # CONFIG_PACKAGE_kcptun-config is not set
+          CONFIG_PACKAGE_kcptun-client=y
+          CONFIG_PACKAGE_kcptun-config=y
           # CONFIG_PACKAGE_kcptun-server is not set
           # CONFIG_PACKAGE_lighttpd is not set
           CONFIG_PACKAGE_microsocks=y
@@ -5922,23 +5923,23 @@ jobs:
           # CONFIG_PACKAGE_radicale is not set
           # CONFIG_PACKAGE_radicale2 is not set
           # CONFIG_PACKAGE_radicale2-examples is not set
-          # CONFIG_PACKAGE_redsocks2 is not set
+          CONFIG_PACKAGE_redsocks2=y
           # CONFIG_PACKAGE_shadowsocks-libev-config is not set
           # CONFIG_PACKAGE_shadowsocks-libev-ss-local is not set
           # CONFIG_PACKAGE_shadowsocks-libev-ss-redir is not set
           # CONFIG_PACKAGE_shadowsocks-libev-ss-rules is not set
           # CONFIG_PACKAGE_shadowsocks-libev-ss-server is not set
           # CONFIG_PACKAGE_shadowsocks-libev-ss-tunnel is not set
-          # CONFIG_PACKAGE_shadowsocks-rust-sslocal is not set
+          CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
           # CONFIG_PACKAGE_shadowsocks-rust-ssmanager is not set
-          # CONFIG_PACKAGE_shadowsocks-rust-ssserver is not set
+          CONFIG_PACKAGE_shadowsocks-rust-ssserver=y
           # CONFIG_PACKAGE_shadowsocks-rust-ssservice is not set
           # CONFIG_PACKAGE_shadowsocks-rust-ssurl is not set
           CONFIG_PACKAGE_shadowsocksr-libev-ssr-check=y
           CONFIG_PACKAGE_shadowsocksr-libev-ssr-local=y
           # CONFIG_PACKAGE_shadowsocksr-libev-ssr-nat is not set
           CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir=y
-          # CONFIG_PACKAGE_shadowsocksr-libev-ssr-server is not set
+          CONFIG_PACKAGE_shadowsocksr-libev-ssr-server=y
           # CONFIG_PACKAGE_sockd is not set
           # CONFIG_PACKAGE_socksify is not set
           # CONFIG_PACKAGE_spawn-fcgi is not set
@@ -5951,7 +5952,7 @@ jobs:
           CONFIG_PACKAGE_uhttpd-mod-ubus=y
           # CONFIG_PACKAGE_uhttpd-mod-ucode is not set
           # CONFIG_PACKAGE_uwsgi is not set
-          # CONFIG_PACKAGE_v2ray-plugin is not set
+          CONFIG_PACKAGE_v2ray-plugin=y
           # CONFIG_PACKAGE_v2raya is not set
           # CONFIG_PACKAGE_xfrpc is not set
           # CONFIG_PACKAGE_xray-plugin is not set
@@ -6101,7 +6102,7 @@ jobs:
           # CONFIG_PACKAGE_httping is not set
           # CONFIG_PACKAGE_httping-nossl is not set
           CONFIG_PACKAGE_https-dns-proxy=y
-          # CONFIG_PACKAGE_hysteria is not set
+          CONFIG_PACKAGE_hysteria=y
           # CONFIG_PACKAGE_i2pd is not set
           # CONFIG_PACKAGE_ibrdtn-tools is not set
           # CONFIG_PACKAGE_ibrdtnd is not set
@@ -6409,7 +6410,7 @@ jobs:
           # CONFIG_PACKAGE_lz4 is not set
           # CONFIG_PACKAGE_pigz is not set
           # CONFIG_PACKAGE_unrar is not set
-          # CONFIG_PACKAGE_unzip is not set
+          CONFIG_PACKAGE_unzip=y
           # CONFIG_PACKAGE_xz-utils is not set
           # CONFIG_PACKAGE_zipcmp is not set
           # CONFIG_PACKAGE_zipmerge is not set
